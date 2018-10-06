@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using WebAppMvcEFCore.Models;
 
 namespace WebAppMvcEFCore.Data
 {
@@ -12,5 +13,9 @@ namespace WebAppMvcEFCore.Data
             : base(options)
         {
         }
+
+        public DbSet<Team> Teams { get; set; }
+        public DbSet<Player> Players { get; set; }
+
     }
 }
