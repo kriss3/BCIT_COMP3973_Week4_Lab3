@@ -1,0 +1,21 @@
+Canada Provinces and Cities:
+
+British Columbia
+BC
+Cities: Vancouver (647540), Richmond (203178), Burnaby (239059), Coquitlam (134962);
+
+Alberta
+AB
+Cities: Edmonton (928182), Calgary(1260000), Banff(7847), Fort McMurray (66573)
+
+Manitoba
+MB
+Cities: Winnipeg (709253), Brandon (48859), Selkirk (10278), Thompson (13123)
+
+Ontario
+ON
+Cities: Toronto (2809000), Ottawa (947031), Brampton (570290), Hamilton (551751)
+
+Nova Scotia
+NS
+Cities: Halifax (414129), Cape Breton (95887), Truro (12261), Amherst (9413)

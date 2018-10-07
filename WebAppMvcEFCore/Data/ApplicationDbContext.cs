@@ -17,5 +17,7 @@ namespace WebAppMvcEFCore.Data
         public DbSet<Team> Teams { get; set; }
         public DbSet<Player> Players { get; set; }
 
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Province> Provinces { get; set; }
     }
 }

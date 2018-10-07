@@ -20,9 +20,10 @@ namespace WebAppMvcEFCore.Data
 
                 // Look for any teams.
                 if (context.Teams.Any())
-                {
                     return;   // DB has already been seeded
-                }
+            
+                if (context.Provinces.Any())
+                    return;
 
                 var teams = DummyData.GetTeams().ToArray();
                 context.Teams.AddRange(teams);
@@ -31,6 +32,15 @@ namespace WebAppMvcEFCore.Data
                 var players = DummyData.GetPlayers(context).ToArray();
                 context.Players.AddRange(players);
                 context.SaveChanges();
+
+                var provinces = DummyData.GetProvinces().ToArray();
+                context.Provinces.AddRange(provinces);
+                context.SaveChanges();
+
+                var cities = DummyData.GetCities(context).ToArray();
+                context.Cities.AddRange(cities);
+                context.SaveChanges();
+
             }
         }
 
@@ -120,6 +130,148 @@ namespace WebAppMvcEFCore.Data
         };
 
             return players;
+        }
+
+        public static List<Province> GetProvinces()
+        {
+            return new List<Province>() {
+                new Province(){
+                    ProvinceCode = "BC",
+                    ProvinceName = "British Columbia"
+                    
+                },
+                new Province(){
+                    ProvinceCode = "AB",
+                    ProvinceName = "Alberta"
+
+                },
+                new Province(){
+                    ProvinceCode = "MB",
+                    ProvinceName = "Manitoba"
+
+                },
+                new Province(){
+                    ProvinceCode = "ON",
+                    ProvinceName = "Ontario"
+
+                },
+                new Province(){
+                    ProvinceCode = "NS",
+                    ProvinceName = "Nova Scotia"
+
+                },
+            };
+        }
+
+        public static List<City> GetCities(ApplicationDbContext ctx)
+        {
+            return new List<City>()
+            {
+                new City(){
+                    CityName = "Vancouver",
+                    Population =647540,
+                    ProvinceName = ctx.Provinces.Find("British Columbia").ProvinceName
+                },
+                new City(){
+                    CityName = "Richmond",
+                    Population =203178,
+                    ProvinceName = ctx.Provinces.Find("British Columbia").ProvinceName
+                },
+                new City(){
+                    CityName = "Burnaby",
+                    Population =239059,
+                    ProvinceName = ctx.Provinces.Find("British Columbia").ProvinceName
+                },
+                new City(){
+                    CityName = "Coquitlam",
+                    Population =134962,
+                    ProvinceName = ctx.Provinces.Find("British Columbia").ProvinceName
+                },
+
+                new City(){
+                    CityName = "Edmonton",
+                    Population =928182,
+                    ProvinceName = ctx.Provinces.Find("Alberta").ProvinceName
+                },
+                new City(){
+                    CityName = "Calgary",
+                    Population =1260000,
+                    ProvinceName = ctx.Provinces.Find("Alberta").ProvinceName
+                },
+                new City(){
+                    CityName = "Banff",
+                    Population =7847,
+                    ProvinceName = ctx.Provinces.Find("Alberta").ProvinceName
+                },
+                new City(){
+                    CityName = "Fort McMurray",
+                    Population =66573,
+                    ProvinceName = ctx.Provinces.Find("Alberta").ProvinceName
+                },
+
+                new City(){
+                    CityName = "Winnipeg",
+                    Population =709253,
+                    ProvinceName = ctx.Provinces.Find("Manitoba").ProvinceName
+                },
+                new City(){
+                    CityName = "Brandon",
+                    Population =48859,
+                    ProvinceName = ctx.Provinces.Find("Manitoba").ProvinceName
+                },
+                new City(){
+                    CityName = "Selkirk",
+                    Population =10278,
+                    ProvinceName = ctx.Provinces.Find("Manitoba").ProvinceName
+                },
+                new City(){
+                    CityName = "Thompson",
+                    Population =13123,
+                    ProvinceName = ctx.Provinces.Find("Manitoba").ProvinceName
+                },
+
+                new City(){
+                    CityName = "Toronto",
+                    Population =2809000,
+                    ProvinceName = ctx.Provinces.Find("Ontario").ProvinceName
+                },
+                new City(){
+                    CityName = "Ottawa",
+                    Population =947031,
+                    ProvinceName = ctx.Provinces.Find("Ontario").ProvinceName
+                },
+                new City(){
+                    CityName = "Brampton",
+                    Population =570290,
+                    ProvinceName = ctx.Provinces.Find("Ontario").ProvinceName
+                },
+                new City(){
+                    CityName = "Hamilton",
+                    Population =551751,
+                    ProvinceName = ctx.Provinces.Find("Ontario").ProvinceName
+                },
+
+                new City(){
+                    CityName = "Halifax",
+                    Population =414129,
+                    ProvinceName = ctx.Provinces.Find("Nova Scotia").ProvinceName
+                },
+                new City(){
+                    CityName = "Cape Breton",
+                    Population =95887,
+                    ProvinceName = ctx.Provinces.Find("Nova Scotia").ProvinceName
+                },
+                new City(){
+                    CityName = "Truro",
+                    Population =12261,
+                    ProvinceName = ctx.Provinces.Find("Nova Scotia").ProvinceName
+                },
+                new City(){
+                    CityName = "Amherst",
+                    Population =9413,
+                    ProvinceName = ctx.Provinces.Find("Nova Scotia").ProvinceName
+                },
+            };
         }
     }
 }
