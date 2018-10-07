@@ -170,106 +170,107 @@ namespace WebAppMvcEFCore.Data
                 new City(){
                     CityName = "Vancouver",
                     Population =647540,
-                    ProvinceName = ctx.Provinces.Find("British Columbia").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("BC").ProvinceCode
                 },
                 new City(){
                     CityName = "Richmond",
                     Population =203178,
-                    ProvinceName = ctx.Provinces.Find("British Columbia").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("BC").ProvinceCode
                 },
                 new City(){
                     CityName = "Burnaby",
                     Population =239059,
-                    ProvinceName = ctx.Provinces.Find("British Columbia").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("BC").ProvinceCode
                 },
                 new City(){
                     CityName = "Coquitlam",
                     Population =134962,
-                    ProvinceName = ctx.Provinces.Find("British Columbia").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("BC").ProvinceCode,
+                    
                 },
 
                 new City(){
                     CityName = "Edmonton",
                     Population =928182,
-                    ProvinceName = ctx.Provinces.Find("Alberta").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("AB").ProvinceCode
                 },
                 new City(){
                     CityName = "Calgary",
                     Population =1260000,
-                    ProvinceName = ctx.Provinces.Find("Alberta").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("AB").ProvinceCode
                 },
                 new City(){
                     CityName = "Banff",
                     Population =7847,
-                    ProvinceName = ctx.Provinces.Find("Alberta").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("AB").ProvinceCode
                 },
                 new City(){
                     CityName = "Fort McMurray",
                     Population =66573,
-                    ProvinceName = ctx.Provinces.Find("Alberta").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("AB").ProvinceCode
                 },
 
                 new City(){
                     CityName = "Winnipeg",
                     Population =709253,
-                    ProvinceName = ctx.Provinces.Find("Manitoba").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("MB").ProvinceCode
                 },
                 new City(){
                     CityName = "Brandon",
                     Population =48859,
-                    ProvinceName = ctx.Provinces.Find("Manitoba").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("MB").ProvinceCode
                 },
                 new City(){
                     CityName = "Selkirk",
                     Population =10278,
-                    ProvinceName = ctx.Provinces.Find("Manitoba").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("MB").ProvinceCode
                 },
                 new City(){
                     CityName = "Thompson",
                     Population =13123,
-                    ProvinceName = ctx.Provinces.Find("Manitoba").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("MB").ProvinceCode
                 },
 
                 new City(){
                     CityName = "Toronto",
                     Population =2809000,
-                    ProvinceName = ctx.Provinces.Find("Ontario").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("ON").ProvinceCode
                 },
                 new City(){
                     CityName = "Ottawa",
                     Population =947031,
-                    ProvinceName = ctx.Provinces.Find("Ontario").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("ON").ProvinceCode
                 },
                 new City(){
                     CityName = "Brampton",
                     Population =570290,
-                    ProvinceName = ctx.Provinces.Find("Ontario").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("ON").ProvinceCode
                 },
                 new City(){
                     CityName = "Hamilton",
                     Population =551751,
-                    ProvinceName = ctx.Provinces.Find("Ontario").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("ON").ProvinceCode
                 },
 
                 new City(){
                     CityName = "Halifax",
                     Population =414129,
-                    ProvinceName = ctx.Provinces.Find("Nova Scotia").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("NS").ProvinceCode
                 },
                 new City(){
                     CityName = "Cape Breton",
                     Population =95887,
-                    ProvinceName = ctx.Provinces.Find("Nova Scotia").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("NS").ProvinceCode
                 },
                 new City(){
                     CityName = "Truro",
                     Population =12261,
-                    ProvinceName = ctx.Provinces.Find("Nova Scotia").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("NS").ProvinceCode
                 },
                 new City(){
                     CityName = "Amherst",
                     Population =9413,
-                    ProvinceName = ctx.Provinces.Find("Nova Scotia").ProvinceName
+                    ProvinceCode = ctx.Provinces.Find("NS").ProvinceCode
                 },
             };
         }

@@ -6,7 +6,7 @@
         public string CityName { get; set; }
         public int Population { get; set; }
 
-        public string ProvinceName { get; set; }
+        public string ProvinceCode { get; set; }
         public Province Province { get; set; }
     }
 }
